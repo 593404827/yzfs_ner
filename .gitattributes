@@ -1,0 +1,13 @@
+# 文本文件自动转换换行符
+* text=auto
+
+# 代码文件强制 LF
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+
+# 二进制文件不处理
+*.bin binary
+*.pth binary
+*.model binary
