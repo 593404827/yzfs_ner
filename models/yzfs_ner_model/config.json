@@ -5,6 +5,7 @@
   "attention_probs_dropout_prob": 0.1,
   "classifier_dropout": null,
   "directionality": "bidi",
+  "gradient_checkpointing": false,
   "hidden_act": "gelu",
   "hidden_dropout_prob": 0.1,
   "hidden_size": 768,
@@ -72,5 +73,5 @@
   "transformers_version": "4.50.3",
   "type_vocab_size": 2,
   "use_cache": true,
-  "vocab_size": 21128
+  "vocab_size": 29791
 }
