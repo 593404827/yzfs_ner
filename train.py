@@ -1,7 +1,11 @@
+# 请在文件最开头添加，例如在 import torch 之前
+import os
+# 设置 Hugging Face 镜像站为 hf-mirror.com [citation:6][citation:8][citation:10]
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from transformers import BertTokenizerFast, BertForTokenClassification
+from transformers import AutoTokenizer, AutoModelForTokenClassification
 from torch.optim import AdamW
 from tqdm import tqdm
 import os
@@ -12,7 +16,7 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 # ---------------------- 极速参数 ----------------------
 MAX_LEN = 256
 BATCH_SIZE = 8
-LEARNING_RATE = 3e-5
+LEARNING_RATE = 2e-5
 NUM_EPOCHS = 15
 PATIENCE = 2
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -125,9 +129,14 @@ class YZFS_NER_Dataset(Dataset):
         }
 
 # ---------------------- 模型加载 ----------------------
-tokenizer = BertTokenizerFast.from_pretrained("bert-base-chinese")
-model = BertForTokenClassification.from_pretrained(
-    "bert-base-chinese",
+# Siku-BERT 的 HuggingFace 模型标识符
+SIKUBERT_MODEL_NAME = "SIKU-BERT/sikubert"  # 或 "SIKU-BERT/sikubert"
+print(f"正在加载 Siku-BERT 模型: {SIKUBERT_MODEL_NAME}")
+
+
+tokenizer = AutoTokenizer.from_pretrained(SIKUBERT_MODEL_NAME)
+model = AutoModelForTokenClassification.from_pretrained(
+    SIKUBERT_MODEL_NAME,
     num_labels=len(LABEL_LIST),
     id2label=ID2LABEL,
     label2id=LABEL2ID
