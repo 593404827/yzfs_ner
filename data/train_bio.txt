@@ -269,7 +269,7 @@ B-颜色类 I-颜色类 B-矿物颜料 B-颜色类 O O O O B-规则/约束 O
 O O O O O O O O O O B-颜色类 O O O O B-工艺类 O O O O O O O O O O O B-工艺类 I-工艺类 O
 
 应用五彩装及叠晕碾玉装者，并以赭笔描画。
-O O O O O O B-工艺类 I-工艺类 B-制度术语 B-工具类 I-制度术语 O O O O B-工具类 B-工具类 I-工艺类 I-工艺类 O
+O O O O O O B-工艺类 I-工艺类 B-制度术语 I-制度术语 I-制度术语 O O O O B-工具类 B-工具类 I-工艺类 I-工艺类 O
 
 应刷染木植，每面方一尺，各使下项：
 O B-工具类 I-工艺类 O O O O O O O B-规则/约束 O O O O O O
@@ -320,7 +320,7 @@ O O O O O O O B-规则/约束 O O O O
 B-建筑载体 I-建筑载体 I-建筑载体 O B-规则/约束 O B-规则/约束 O O O
 
 凡青绿叠晕棱间装，柱身内筍文，或素绿或碾玉装；
-O B-制度术语 I-制度术语 B-工艺类 I-工艺类 I-制度术语 B-工艺类 I-工艺类 O B-建筑载体 I-建筑载体 O O O O O O O O B-制度术语 B-工具类 I-制度术语 O
+O B-制度术语 I-制度术语 B-工艺类 I-工艺类 I-制度术语 B-工艺类 I-工艺类 O B-建筑载体 I-建筑载体 O O O O O O O O B-制度术语 I-制度术语 I-制度术语 O
 
 代赭石：
 B-矿物颜料 I-矿物颜料 I-矿物颜料 O
