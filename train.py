@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 # ---------------------- 极速参数 ----------------------
 MAX_LEN = 256
 BATCH_SIZE = 8
-LEARNING_RATE = 2e-5
+LEARNING_RATE = 3e-5
 NUM_EPOCHS = 15
 PATIENCE = 2
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
